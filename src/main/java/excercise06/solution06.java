@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 6 Solution
+ *  Copyright 2021 Isaac Lynch
+ */
+
 package excercise06;
 
 import java.util.*;
@@ -31,5 +36,18 @@ public class solution06 {
 
 }
 
-
+/* psuedocode: first we must import java.util.*. then, instances for the scanner
+function is created along with two ints: currentA (the current age of the user)
+and then retirementA (the age the user wants to retire at). after that the first
+prompt is output and the number input by the user is read, same thing happens w/
+the retirement output as well. after that, i make a call of the calendar function
+so the program can read the in internal clock to get the year with the calendar.year
+function call. (i need to find a better word other than function :pensive:) then, an
+if statement is made to see whether or not the number of years the user has left
+until retirement is positive or negative. first, an int is made called retirementTime
+which holds the number of years left the user has until retirement. now, if the number
+of years left until retirement is positive the system prints out the statement saying
+how many years the user has left until retirement and the year, and if it's negative
+it prints out the statement saying the user can already retire.
+ */
 
