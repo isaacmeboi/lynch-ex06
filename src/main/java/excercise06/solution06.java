@@ -7,10 +7,12 @@ package excercise06;
 
 import java.util.*;
 
-public class solution06 {
-    public static void main(String[] args) {
-        int currentA;
-        int retirementA;
+class Retirement {
+    int currentA;
+    int retirementA;
+    int currentTime = Calendar.getInstance().get(Calendar.YEAR); //the calendar function to store year
+
+    public void scn() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("What is your current age? ");
@@ -18,8 +20,9 @@ public class solution06 {
 
         System.out.print("At what age would you like to retire? ");
         retirementA = sc.nextInt();
+    }
 
-        int currentTime = Calendar.getInstance().get(Calendar.YEAR); //the calendar function to store year
+    public void prt() {
         int yearsLTR = retirementA-currentA;
 
         if(yearsLTR >= 0) { //this is to check if the number of years left is negative or not
@@ -31,9 +34,15 @@ public class solution06 {
         else {
             System.out.println("You can already retire, you silly goose!"); //the print statement for a negative # of years
         }
-
     }
+}
+public class solution06 {
+    public static void main(String[] args) {
 
+        Retirement ca = new Retirement();
+        ca.scn();
+        ca.prt();
+    }
 }
 
 /* psuedocode: first we must import java.util.*. then, instances for the scanner
@@ -49,5 +58,8 @@ which holds the number of years left the user has until retirement. now, if the 
 of years left until retirement is positive the system prints out the statement saying
 how many years the user has left until retirement and the year, and if it's negative
 it prints out the statement saying the user can already retire.
+
+edit: FINALLY all the files are fixed. once again, just fixed the code so everything
+wasn't running in the main function.
  */
 
